@@ -94,8 +94,10 @@ class _PersianYearPickerState extends State<PersianYearPicker>
     }
 
     _makeYearList();
-    controller =
-        AnimationController(duration: Duration(milliseconds: 150), vsync: this);
+    controller = AnimationController(
+      vsync: this,
+      duration: Duration(milliseconds: 150),
+    );
     animation = CurvedAnimation(parent: controller, curve: Curves.easeInOut)
       ..addListener(() {
         setState(() {});
